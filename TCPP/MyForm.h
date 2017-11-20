@@ -98,7 +98,7 @@ namespace TCPP {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button1->ForeColor = System::Drawing::Color::White;
-			this->button1->Location = System::Drawing::Point(198, 200);
+			this->button1->Location = System::Drawing::Point(0, 200);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(50, 50);
 			this->button1->TabIndex = 0;
@@ -116,7 +116,7 @@ namespace TCPP {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button2->ForeColor = System::Drawing::Color::White;
-			this->button2->Location = System::Drawing::Point(248, 200);
+			this->button2->Location = System::Drawing::Point(50, 200);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(50, 50);
 			this->button2->TabIndex = 0;
@@ -134,7 +134,7 @@ namespace TCPP {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button3->ForeColor = System::Drawing::Color::White;
-			this->button3->Location = System::Drawing::Point(298, 200);
+			this->button3->Location = System::Drawing::Point(100, 200);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(50, 50);
 			this->button3->TabIndex = 0;
@@ -152,7 +152,7 @@ namespace TCPP {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button4->ForeColor = System::Drawing::Color::White;
-			this->button4->Location = System::Drawing::Point(198, 150);
+			this->button4->Location = System::Drawing::Point(0, 150);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(50, 50);
 			this->button4->TabIndex = 0;
@@ -170,7 +170,7 @@ namespace TCPP {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button5->ForeColor = System::Drawing::Color::White;
-			this->button5->Location = System::Drawing::Point(248, 150);
+			this->button5->Location = System::Drawing::Point(50, 150);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(50, 50);
 			this->button5->TabIndex = 0;
@@ -188,7 +188,7 @@ namespace TCPP {
 			this->button6->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button6->ForeColor = System::Drawing::Color::White;
-			this->button6->Location = System::Drawing::Point(298, 150);
+			this->button6->Location = System::Drawing::Point(100, 150);
 			this->button6->Name = L"button6";
 			this->button6->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->button6->Size = System::Drawing::Size(50, 50);
@@ -208,7 +208,7 @@ namespace TCPP {
 			this->button7->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button7->ForeColor = System::Drawing::Color::White;
-			this->button7->Location = System::Drawing::Point(198, 100);
+			this->button7->Location = System::Drawing::Point(0, 100);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(50, 50);
 			this->button7->TabIndex = 0;
@@ -227,7 +227,7 @@ namespace TCPP {
 			this->button8->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button8->ForeColor = System::Drawing::Color::White;
-			this->button8->Location = System::Drawing::Point(248, 100);
+			this->button8->Location = System::Drawing::Point(50, 100);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(50, 50);
 			this->button8->TabIndex = 0;
@@ -246,7 +246,7 @@ namespace TCPP {
 			this->button9->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button9->ForeColor = System::Drawing::Color::White;
-			this->button9->Location = System::Drawing::Point(298, 100);
+			this->button9->Location = System::Drawing::Point(100, 100);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(50, 50);
 			this->button9->TabIndex = 0;
@@ -264,7 +264,7 @@ namespace TCPP {
 			this->button10->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button10->ForeColor = System::Drawing::Color::White;
-			this->button10->Location = System::Drawing::Point(198, 250);
+			this->button10->Location = System::Drawing::Point(0, 250);
 			this->button10->Name = L"button10";
 			this->button10->Padding = System::Windows::Forms::Padding(5, 0, 0, 0);
 			this->button10->Size = System::Drawing::Size(100, 50);
@@ -284,7 +284,7 @@ namespace TCPP {
 			this->button11->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button11->ForeColor = System::Drawing::Color::White;
-			this->button11->Location = System::Drawing::Point(298, 250);
+			this->button11->Location = System::Drawing::Point(100, 250);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(50, 50);
 			this->button11->TabIndex = 0;
@@ -302,7 +302,7 @@ namespace TCPP {
 			this->button12->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button12->ForeColor = System::Drawing::Color::Black;
-			this->button12->Location = System::Drawing::Point(198, 50);
+			this->button12->Location = System::Drawing::Point(0, 50);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(50, 50);
 			this->button12->TabIndex = 0;
@@ -320,7 +320,7 @@ namespace TCPP {
 			this->button13->Font = (gcnew System::Drawing::Font(L"Roboto", 21, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(204)));
 			this->button13->ForeColor = System::Drawing::Color::Black;
-			this->button13->Location = System::Drawing::Point(248, 50);
+			this->button13->Location = System::Drawing::Point(50, 50);
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(50, 50);
 			this->button13->TabIndex = 0;
@@ -338,7 +338,7 @@ namespace TCPP {
 			this->button14->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button14->ForeColor = System::Drawing::Color::Black;
-			this->button14->Location = System::Drawing::Point(298, 50);
+			this->button14->Location = System::Drawing::Point(100, 50);
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(50, 50);
 			this->button14->TabIndex = 0;
@@ -356,7 +356,7 @@ namespace TCPP {
 			this->button15->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button15->ForeColor = System::Drawing::Color::White;
-			this->button15->Location = System::Drawing::Point(348, 50);
+			this->button15->Location = System::Drawing::Point(150, 50);
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(50, 50);
 			this->button15->TabIndex = 0;
@@ -374,7 +374,7 @@ namespace TCPP {
 			this->button16->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button16->ForeColor = System::Drawing::Color::White;
-			this->button16->Location = System::Drawing::Point(348, 100);
+			this->button16->Location = System::Drawing::Point(150, 100);
 			this->button16->Name = L"button16";
 			this->button16->Size = System::Drawing::Size(50, 50);
 			this->button16->TabIndex = 0;
@@ -392,7 +392,7 @@ namespace TCPP {
 			this->button17->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button17->ForeColor = System::Drawing::Color::White;
-			this->button17->Location = System::Drawing::Point(348, 150);
+			this->button17->Location = System::Drawing::Point(150, 150);
 			this->button17->Name = L"button17";
 			this->button17->Size = System::Drawing::Size(50, 50);
 			this->button17->TabIndex = 0;
@@ -410,7 +410,7 @@ namespace TCPP {
 			this->button18->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button18->ForeColor = System::Drawing::Color::White;
-			this->button18->Location = System::Drawing::Point(348, 200);
+			this->button18->Location = System::Drawing::Point(150, 200);
 			this->button18->Name = L"button18";
 			this->button18->Size = System::Drawing::Size(50, 50);
 			this->button18->TabIndex = 0;
@@ -428,7 +428,7 @@ namespace TCPP {
 			this->button19->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button19->ForeColor = System::Drawing::Color::White;
-			this->button19->Location = System::Drawing::Point(348, 250);
+			this->button19->Location = System::Drawing::Point(150, 250);
 			this->button19->Name = L"button19";
 			this->button19->Size = System::Drawing::Size(50, 50);
 			this->button19->TabIndex = 0;
@@ -443,7 +443,7 @@ namespace TCPP {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label1->ForeColor = System::Drawing::Color::White;
-			this->label1->Location = System::Drawing::Point(198, 0);
+			this->label1->Location = System::Drawing::Point(0, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(200, 50);
 			this->label1->TabIndex = 1;
@@ -455,7 +455,7 @@ namespace TCPP {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Black;
-			this->ClientSize = System::Drawing::Size(398, 300);
+			this->ClientSize = System::Drawing::Size(200, 300);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button9);
 			this->Controls->Add(this->button8);
