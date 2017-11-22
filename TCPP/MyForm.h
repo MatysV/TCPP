@@ -52,12 +52,18 @@ namespace TCPP {
 	private: System::Windows::Forms::Button^  button19;
 	private: System::Windows::Forms::Label^  label1;
 
+
+
+
+
+	private: System::ComponentModel::IContainer^  components;
+
 	
 	private:
 		/// <summary>
 		/// Обязательная переменная конструктора.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -360,6 +366,7 @@ namespace TCPP {
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(50, 50);
 			this->button15->TabIndex = 0;
+			this->button15->Tag = L"1";
 			this->button15->Text = L"÷";
 			this->button15->UseVisualStyleBackColor = false;
 			this->button15->Click += gcnew System::EventHandler(this, &MyForm::button15_Click);
@@ -378,6 +385,7 @@ namespace TCPP {
 			this->button16->Name = L"button16";
 			this->button16->Size = System::Drawing::Size(50, 50);
 			this->button16->TabIndex = 0;
+			this->button16->Tag = L"2";
 			this->button16->Text = L"×";
 			this->button16->UseVisualStyleBackColor = false;
 			this->button16->Click += gcnew System::EventHandler(this, &MyForm::button16_Click);
@@ -396,6 +404,7 @@ namespace TCPP {
 			this->button17->Name = L"button17";
 			this->button17->Size = System::Drawing::Size(50, 50);
 			this->button17->TabIndex = 0;
+			this->button17->Tag = L"3";
 			this->button17->Text = L"-";
 			this->button17->UseVisualStyleBackColor = false;
 			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
@@ -414,6 +423,7 @@ namespace TCPP {
 			this->button18->Name = L"button18";
 			this->button18->Size = System::Drawing::Size(50, 50);
 			this->button18->TabIndex = 0;
+			this->button18->Tag = L"4";
 			this->button18->Text = L"+";
 			this->button18->UseVisualStyleBackColor = false;
 			this->button18->Click += gcnew System::EventHandler(this, &MyForm::button18_Click);
@@ -489,141 +499,142 @@ namespace TCPP {
 
 #pragma endregion
 	public: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
-	
 	}
 	public: double a, b; char c; bool old = false;
-			
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (label1->Text == "0" || old) { label1->Text = "1"; old = 0; }
-		else label1->Text += "1";
-	}
-	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (label1->Text == "0" || old) { label1->Text = "2"; old = 0; }
-		else label1->Text += "2";
-	}
-	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (label1->Text == "0" || old) { label1->Text = "3"; old = 0; }
-		else label1->Text += "3";
-	}
-	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (label1->Text == "0" || old) { label1->Text = "4"; old = 0; }
-		else label1->Text += "4";
-	}
-	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (label1->Text == "0" || old) { label1->Text = "5"; old = 0; }
-		else label1->Text += "5";
-	}
-	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (label1->Text == "0" || old) { label1->Text = "6"; old = 0; }
-		else label1->Text += "6";
-	}
-	private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (label1->Text == "0" || old) { label1->Text = "7"; old = 0; }
-		else label1->Text += "7";
-	}
-	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (label1->Text == "0" || old) { label1->Text = "8"; old = 0; }
-		else label1->Text += "8";
-	}
-	private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (label1->Text == "0" || old) { label1->Text = "9"; old = 0; }
-		else label1->Text += "9";
-	}
-	private: System::Void button10_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (label1->Text == "0" || old) { label1->Text = "0"; old = 0; }
-		else label1->Text += "0";
-	}
-	private: System::Void button11_Click(System::Object^  sender, System::EventArgs^  e) {
-		if(!label1->Text->Contains(",") && !old) label1->Text += ",";
-		else if (old) { label1->Text = "0,"; old = 0; }
-	}
-	private: System::Void button12_Click(System::Object^  sender, System::EventArgs^  e) {
-		label1->Text = "0";
-		a = 0;
-		b = 0;
-		c = 0;
-		button15->BackColor = Color::DarkOrange;
-		button15->ForeColor = Color::White;
-		button16->BackColor = Color::DarkOrange;
-		button16->ForeColor = Color::White;
-		button17->BackColor = Color::DarkOrange;
-		button17->ForeColor = Color::White;
-		button18->BackColor = Color::DarkOrange;
-		button18->ForeColor = Color::White;
-	}
-	private: System::Void button13_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (label1->Text[0] != '-' && label1->Text != "0") label1->Text = "-" + label1->Text;
-		else if (label1->Text[0] == '-') label1->Text = label1->Text->Remove(0,1);
-	}
-	private: System::Void button14_Click(System::Object^  sender, System::EventArgs^  e) {
-		if(a == 0)label1->Text = Convert::ToString(System::Convert::ToDouble(label1->Text) * 0.01);
-		else label1->Text = Convert::ToString(a * (System::Convert::ToDouble(label1->Text) * 0.01));
-	}
-	private: System::Void button15_Click(System::Object^  sender, System::EventArgs^  e) {
-		button15->BackColor = Color::White;
-		button15->ForeColor = Color::DarkOrange;
-		c = '/';
-		a = Convert::ToDouble(label1->Text);
-		old = 1;
-	}
-	private: System::Void button16_Click(System::Object^  sender, System::EventArgs^  e) {
-		button16->BackColor = Color::White;
-		button16->ForeColor = Color::DarkOrange;
-		c = '×';
-		a = Convert::ToDouble(label1->Text);
-		old = 1;
-	}
-	private: System::Void button17_Click(System::Object^  sender, System::EventArgs^  e) {
-		button17->BackColor = Color::White;
-		button17->ForeColor = Color::DarkOrange;
-		c = '-';
-		a = Convert::ToDouble(label1->Text);
-		old = 1;
-	}
-	private: System::Void button18_Click(System::Object^  sender, System::EventArgs^  e) {
-		button18->BackColor = Color::White;
-		button18->ForeColor = Color::DarkOrange;
-		c = '+';
-		a = Convert::ToDouble(label1->Text);
-		old = 1;
-	}
-	private: System::Void button19_Click(System::Object^  sender, System::EventArgs^  e) {
-		b = Convert::ToDouble(label1->Text);
+
+	public:	void printIn(String^ n) {
+			if (n == ",") {
+				if (!label1->Text->Contains(",") && !old) label1->Text += ",";
+				else if (old) { 
+					label1->Text = "0,"; 
+					old = 0; 
+				}
+			}
+			else if (n == "-") {
+				if (label1->Text[0] != '-' && label1->Text != "0") label1->Text = "-" + label1->Text;
+				else if (label1->Text[0] == '-') label1->Text = label1->Text->Remove(0, 1);
+			}
+			else if (label1->Text == "0" || old) {
+				label1->Text = n; 
+				old = 0;
+			}
+			else label1->Text += n;
+		}
+	public:	void doFunction(double a, double b, char c) {
 		if (c) {
 			switch (c) {
-				case (int)'/': {
+				case (int)'/':
+				{
 					a = a / b;
-					button15->BackColor = Color::DarkOrange;
-					button15->ForeColor = Color::White;
+					pressed("15", 0);
 					c = 0;
 					break;
 				};
-				case (int)'×': {
+				case (int)'×': 
+				{
 					a = a * b;
-					button16->BackColor = Color::DarkOrange;
-					button16->ForeColor = Color::White;
+					pressed("16", 0);
 					c = 0;
 					break;
 				};
-				case (int)'-': {
+				case (int)'-':
+				{
 					a = a - b;
-					button17->BackColor = Color::DarkOrange;
-					button17->ForeColor = Color::White;
+					pressed("17", 0);
 					c = 0;
 					break;
 				};
-				case (int)'+': {
+				case (int)'+':
+				{
 					a = a + b;
-					button18->BackColor = Color::DarkOrange;
-					button18->ForeColor = Color::White;
+					pressed("18", 0);
 					c = 0;
 					break;
 				};
 				default: break;
 			};
 			label1->Text = Convert::ToString(a);
+			a = b = 0; old = 1;
 		}
-		a = 0; b = 0; old = 1;
+	}
+	public: void pressed(String^ n, bool active) {
+			Button^ b = dynamic_cast<Button^>(Controls[("button" + n)]);
+			if (active) {
+				b->BackColor = Color::White;
+				b->ForeColor = Color::DarkOrange;
+			}
+			else
+			{
+				b->BackColor = Color::DarkOrange;
+				b->ForeColor = Color::White;
+			}
+		}
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) { printIn("1"); }
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) { printIn("2"); }
+	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) { printIn("3"); }
+	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) { printIn("4"); }
+	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) { printIn("5"); }
+	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) { printIn("6"); }
+	private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) { printIn("7"); }
+	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) { printIn("8"); }
+	private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) { printIn("9"); }
+	private: System::Void button10_Click(System::Object^  sender, System::EventArgs^  e) { printIn("0"); }
+	private: System::Void button11_Click(System::Object^  sender, System::EventArgs^  e) { printIn(","); }
+	private: System::Void button12_Click(System::Object^  sender, System::EventArgs^  e) {
+		label1->Text = "0";
+		a = b = c = 0;
+		for (int i(15); i <= 18; i++) {
+			pressed(Convert::ToString(i), 0);
+		}
+	}
+	private: System::Void button13_Click(System::Object^  sender, System::EventArgs^  e) { printIn("-"); }
+	private: System::Void button14_Click(System::Object^  sender, System::EventArgs^  e) {
+		if(a == 0)label1->Text = Convert::ToString(System::Convert::ToDouble(label1->Text) * 0.01);
+		else label1->Text = Convert::ToString(a * (System::Convert::ToDouble(label1->Text) * 0.01));
+	}
+	private: System::Void button15_Click(System::Object^  sender, System::EventArgs^  e) {
+		pressed("15", 1);
+		if (c != 0) {
+			doFunction(a, b = Convert::ToDouble(label1->Text), c);
+			pressed("15", 1);
+		}
+		a = Convert::ToDouble(label1->Text);
+		old = 1;
+		c = '/';
+	}
+	private: System::Void button16_Click(System::Object^  sender, System::EventArgs^  e) {
+		pressed("16", 1);
+		if (c != 0) {
+			doFunction(a, b = Convert::ToDouble(label1->Text), c);
+			pressed("16", 1);
+		}
+		a = Convert::ToDouble(label1->Text);
+		old = 1;
+		c = '×';
+	}
+	private: System::Void button17_Click(System::Object^  sender, System::EventArgs^  e) {
+		pressed("17", 1);
+		if (c != 0) {
+			doFunction(a, b = Convert::ToDouble(label1->Text), c);
+			pressed("17", 1);
+		}
+		a = Convert::ToDouble(label1->Text);
+		old = 1;
+		c = '-';
+	}
+	private: System::Void button18_Click(System::Object^  sender, System::EventArgs^  e) {
+		pressed("18", 1);
+		if (c != 0) {
+			doFunction(a, b = Convert::ToDouble(label1->Text), c);
+			pressed("18", 1);
+		}
+		a = Convert::ToDouble(label1->Text);
+		old = 1;
+		c = '+';
+	}
+	private: System::Void button19_Click(System::Object^  sender, System::EventArgs^  e) {
+		b = Convert::ToDouble(label1->Text);
+		doFunction(a, b, c);
 	}
 };
 }
