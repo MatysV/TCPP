@@ -992,11 +992,10 @@ namespace TCPP {
 	private: System::Void button35_Click(System::Object^  sender, System::EventArgs^  e) { resize(); }
 
 	private: System::Void button30_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (a == 0)label1->Text = Convert::ToString(Math::Sin(System::Convert::ToDouble(label1->Text)));
-		else label1->Text = Convert::ToString(Math::Sin(System::Convert::ToDouble(label1->Text)));
+		label1->Text = Convert::ToString(Math::Sin(System::Convert::ToDouble(label1->Text)));
 	}
 	private: System::Void button34_Click(System::Object^  sender, System::EventArgs^  e) {
-		//cos
+		label1->Text = Convert::ToString(Math::Cos(System::Convert::ToDouble(label1->Text)));
 	}
 
 private: System::Void button27_Click(System::Object^  sender, System::EventArgs^  e) {
