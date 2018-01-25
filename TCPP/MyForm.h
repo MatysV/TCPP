@@ -1,6 +1,6 @@
 ﻿#pragma once
 namespace TCPP {
-	
+
 	using namespace std;
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -15,7 +15,7 @@ namespace TCPP {
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm(void){
+		MyForm(void) {
 			InitializeComponent();
 			//
 			//TODO: добавьте код конструктора
@@ -25,8 +25,8 @@ namespace TCPP {
 		/// <summary>
 		/// Освободить все используемые ресурсы.
 		/// </summary>
-		~MyForm(){
-			if (components){
+		~MyForm() {
+			if (components) {
 				delete components;
 			}
 		}
@@ -841,105 +841,99 @@ namespace TCPP {
 #pragma endregion
 	public: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
-	public: double a, b; char c; bool old = 0, size = 0;
+	public: double a, b, result; char c; bool old = 0, size = 0;
 
 	public:	void printIn(String^ n) {
-			if (n == ",") {
-				if (!label1->Text->Contains(",") && !old) label1->Text += ",";
-				else if (old) { 
-					label1->Text = "0,"; 
-					old = 0; 
-				}
-			}
-			else if (n == "-") {
-				if (label1->Text[0] != '-' && label1->Text != "0") label1->Text = "-" + label1->Text;
-				else if (label1->Text[0] == '-') label1->Text = label1->Text->Remove(0, 1);
-			}
-			else if (label1->Text == "0" || old) {
-				label1->Text = n; 
+		if (n == ",") {
+			if (!label1->Text->Contains(",") && !old) label1->Text += ",";
+			else if (old) {
+				label1->Text = "0,";
 				old = 0;
 			}
-			else label1->Text += n;
 		}
+		else if (n == "-") {
+			if (label1->Text[0] != '-' && label1->Text != "0") label1->Text = "-" + label1->Text;
+			else if (label1->Text[0] == '-') label1->Text = label1->Text->Remove(0, 1);
+		}
+		else if (label1->Text == "0" || old) {
+			label1->Text = n;
+			old = 0;
+		}
+		else label1->Text += n;
+	}
 	public:	void doFunction(double a, double b, char c) {
 		if (c) {
 			switch (c) {
-				case (int)'/':
-				{
-					a = a / b;
-					pressed("15", 0);
-					c = 0;
-					break;
-				};
-				case (int)'×': 
-				{
-					a = a * b;
-					pressed("16", 0);
-					c = 0;
-					break;
-				};
-				case (int)'-':
-				{
-					a = a - b;
-					pressed("17", 0);
-					c = 0;
-					break;
-				};
-				case (int)'+':
-				{
-					a = a + b;
-					pressed("18", 0);
-					c = 0;
-					break;
-				};
-				case (int)'1':
-				{
-					a = Math::Pow(a, b);
-					c = 0;
-					break;
-				}
-				case (int)'2':
-				{
-					a = Math::Pow(a, 1.0 / b);
-					c = 0;
-					break;
-				}
-				default: break;
+			case (int)'/':
+			{
+				result = a / b;
+				pressed("15", 0);
+				break;
 			};
-			label1->Text = Convert::ToString(a);
-			a = b = 0; old = 1;
+			case (int)'×':
+			{
+				result = a * b;
+				pressed("16", 0);
+				break;
+			};
+			case (int)'-':
+			{
+				result = a - b;
+				pressed("17", 0);
+				break;
+			};
+			case (int)'+':
+			{
+				result = a + b;
+				pressed("18", 0);
+				break;
+			};
+			case (int)'1':
+			{
+				result = Math::Pow(a, b);
+				break;
+			}
+			case (int)'2':
+			{
+				result = Math::Pow(a, 1.0 / b);
+				break;
+			}
+			default: break;
+			};
+			label1->Text = Convert::ToString(result);
+			old = 1;
 		}
 	}
 	public: void pressed(String^ n, bool active) {
-			Button^ b = dynamic_cast<Button^>(Controls[("button" + n)]);
-			if (active) {
-				b->BackColor = Color::White;
-				b->ForeColor = Color::DarkOrange;
-			}
-			else
-			{
-				b->BackColor = Color::DarkOrange;
-				b->ForeColor = Color::White;
-			}
+		Button^ b = dynamic_cast<Button^>(Controls[("button" + n)]);
+		if (active) {
+			b->BackColor = Color::White;
+			b->ForeColor = Color::DarkOrange;
 		}
-	public: void clear() {
-			label1->Text = "0";
-			a = b = c = 0;
-			for (int i(15); i <= 18; i++) {
-				pressed(Convert::ToString(i), 0);
-			}
+		else
+		{
+			b->BackColor = Color::DarkOrange;
+			b->ForeColor = Color::White;
 		}
-			void resize() {
-			if (!size) {
-				this->ClientSize = System::Drawing::Size(362, 300);
-				size = 1;
-			}
-			else if (size) {
-				this->ClientSize = System::Drawing::Size(212, 300);
-					size = 0;
-			}
-
 	}
+	public: void clear() {
+		label1->Text = "0";
+		a = b = c = 0;
+		for (int i(15); i <= 18; i++) {
+			pressed(Convert::ToString(i), 0);
+		}
+	}
+			void resize() {
+				if (!size) {
+					this->ClientSize = System::Drawing::Size(362, 300);
+					size = 1;
+				}
+				else if (size) {
+					this->ClientSize = System::Drawing::Size(212, 300);
+					size = 0;
+				}
+
+			}
 			double fact(int N) {
 				if (N < 0)
 					return 0;
@@ -962,7 +956,7 @@ namespace TCPP {
 	private: System::Void button12_Click(System::Object^  sender, System::EventArgs^  e) { clear(); }
 	private: System::Void button13_Click(System::Object^  sender, System::EventArgs^  e) { printIn("-"); }
 	private: System::Void button14_Click(System::Object^  sender, System::EventArgs^  e) {
-		if(a == 0)label1->Text = Convert::ToString(System::Convert::ToDouble(label1->Text) * 0.01);
+		if (a == 0)label1->Text = Convert::ToString(System::Convert::ToDouble(label1->Text) * 0.01);
 		else label1->Text = Convert::ToString(a * (System::Convert::ToDouble(label1->Text) * 0.01));
 	}
 	private: System::Void button15_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -997,7 +991,7 @@ namespace TCPP {
 	}
 	private: System::Void button18_Click(System::Object^  sender, System::EventArgs^  e) {
 		pressed("18", 1);
-		if (c != 0) {
+		if (c) {
 			doFunction(a, b = Convert::ToDouble(label1->Text), c);
 			pressed("18", 1);
 		}
@@ -1006,8 +1000,11 @@ namespace TCPP {
 		c = '+';
 	}
 	private: System::Void button19_Click(System::Object^  sender, System::EventArgs^  e) {
-		b = Convert::ToDouble(label1->Text);
-		doFunction(a, b, c);
+		if (c != 0) {
+			b = Convert::ToDouble(label1->Text);
+			doFunction(a, b, c);
+			a = b = c = 0;
+		}
 	}
 	private: System::Void button35_Click(System::Object^  sender, System::EventArgs^  e) { resize(); }
 	private: System::Void button30_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1032,7 +1029,7 @@ namespace TCPP {
 		old = 1;
 	}
 	private: System::Void button22_Click(System::Object^  sender, System::EventArgs^  e) {
-		if(c != 0) {
+		if (c != 0) {
 			doFunction(a, b = Convert::ToDouble(label1->Text), c);
 		}
 		a = Convert::ToDouble(label1->Text);
@@ -1079,5 +1076,5 @@ namespace TCPP {
 		label1->Text = Convert::ToString(Math::Pow(10, System::Convert::ToDouble(label1->Text)));
 		old = 1;
 	}
-};
+	};
 }
